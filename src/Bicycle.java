@@ -4,18 +4,7 @@ public class Bicycle extends Machine {
         super(modelName, wheelsCount);
     }
 
-    @Override
-    public void updateTyre() {
-        System.out.println("Меняем покрышку");
-    }
 
-    @Override
-    public void checkEngine() {
 
-    }
 
-    @Override
-    public void checkTrailer() {
-
-    }
 }

@@ -1,4 +1,4 @@
-public abstract class Machine {
+public abstract class Machine implements Service {
     private String modelName;
     private int wheelsCount;
 
@@ -23,9 +23,15 @@ public abstract class Machine {
         this.wheelsCount = wheelsCount;
     }
 
-    public abstract void updateTyre();
+    public void updateTyre() {
+        System.out.println("Меняем покрышку");
+    }
 
-    public abstract void checkEngine();
-
-    public abstract void checkTrailer();
+    @Override
+    public void servise() {
+        System.out.println("Обслуживаем " + getModelName());
+        for (int i = 0; i < getWheelsCount(); i++) {
+            updateTyre();
+        }
+    }
 }
